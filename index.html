@@ -1,0 +1,1613 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Mazhar Ud Din | Web &amp; Mobile Application Developer</title>
+
+  <meta name="description"
+    content="Web &amp; Mobile Application Developer in Karachi — React Native, React.js, and Flutter. Shipping live production apps with Firebase, payments, and real-time features.">
+  <meta name="keywords"
+    content="Mazhar Ud Din, React Native Developer, React.js, Flutter, Firebase, Karachi, Mobile App Developer">
+  <meta name="author" content="Mazhar Ud Din">
+
+  <meta property="og:title" content="Mazhar Ud Din | Web &amp; Mobile Application Developer">
+  <meta property="og:description"
+    content="React Native, React.js, and Flutter developer in Karachi shipping live production mobile and web apps.">
+  <meta property="og:type" content="website">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Mazhar Ud Din",
+    "jobTitle": "Web & Mobile Application Developer",
+    "email": "mailto:mazharuddin07610761@gmail.com",
+    "telephone": "+923102074204",
+    "url": "https://github.com/mazhar-ud-din",
+    "sameAs": [
+      "https://www.linkedin.com/in/mazhar-ud-din-b71137252",
+      "https://github.com/mazhar-ud-din"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Karachi",
+      "addressCountry": "Pakistan"
+    }
+  }
+  </script>
+
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📱</text></svg>">
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Extra inline styles for project SVG placeholders and mobile-specific tweaks -->
+  <style>
+    .project-svg-thumb {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 2rem;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .stat-item {
+      text-align: center;
+    }
+
+    .stat-number {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--color-primary);
+      font-family: var(--font-heading);
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-size: 0.8rem;
+      color: var(--color-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-top: 0.25rem;
+    }
+
+    .stat-divider {
+      width: 1px;
+      background-color: var(--color-border);
+      align-self: stretch;
+    }
+
+    .platform-badges {
+      display: flex;
+      gap: 0.75rem;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .platform-badge {
+      padding: 0.4rem 1rem;
+      border-radius: var(--radius-full);
+      font-size: 0.8rem;
+      font-weight: 600;
+      border: 1px solid;
+    }
+
+    .platform-badge.android {
+      color: #34d399;
+      border-color: rgba(52, 211, 153, 0.3);
+      background: rgba(52, 211, 153, 0.05);
+    }
+
+    .platform-badge.ios {
+      color: #a78bfa;
+      border-color: rgba(167, 139, 250, 0.3);
+      background: rgba(167, 139, 250, 0.05);
+    }
+
+    .platform-badge.rn {
+      color: var(--color-primary);
+      border-color: rgba(32, 178, 166, 0.3);
+      background: rgba(32, 178, 166, 0.05);
+    }
+
+    /* SVG project card backgrounds */
+    .proj-bg-1 {
+      background: linear-gradient(135deg, #0d1b2a 0%, #0a2a4a 50%, #0d2b3e 100%);
+    }
+
+    .proj-bg-2 {
+      background: linear-gradient(135deg, #1a0a2e 0%, #16213e 50%, #0f3460 100%);
+    }
+
+    .proj-bg-3 {
+      background: linear-gradient(135deg, #1a1a0a 0%, #2d2600 50%, #3d3000 100%);
+    }
+
+    .proj-bg-4 {
+      background: linear-gradient(135deg, #0a1a2a 0%, #0d2040 50%, #0a2e2a 100%);
+    }
+
+    .proj-bg-5 {
+      background: linear-gradient(135deg, #0a1a0a 0%, #1a3a1a 50%, #0d2a1a 100%);
+    }
+
+    .proj-bg-6 {
+      background: linear-gradient(135deg, #1a0a1a 0%, #2a1a3a 50%, #1a2040 100%);
+    }
+
+    .proj-bg-7 {
+      background: linear-gradient(135deg, #2a0a0a 0%, #3a1a0a 50%, #2a1500 100%);
+    }
+
+    .proj-bg-8 {
+      background: linear-gradient(135deg, #0a0a1a 0%, #1a1a3a 50%, #0a2040 100%);
+    }
+
+    .proj-icon-large {
+      font-size: 5rem;
+      line-height: 1;
+      filter: drop-shadow(0 0 30px rgba(32, 178, 166, 0.4));
+    }
+
+    .proj-card-label {
+      font-size: 0.85rem;
+      font-family: var(--font-heading);
+      color: var(--color-primary);
+      margin-top: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    /* Education card — responsive tweaks (layout in style.css) */
+
+    .skill-category {
+      margin-bottom: 1.75rem;
+    }
+
+    .skill-category-title {
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--color-primary);
+      margin-bottom: 0.75rem;
+    }
+
+    /* timeline current badge */
+    .current-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.2rem 0.75rem;
+      border-radius: var(--radius-full);
+      font-size: 0.75rem;
+      font-weight: 600;
+      background: rgba(34, 197, 94, 0.1);
+      color: #4ade80;
+      border: 1px solid rgba(34, 197, 94, 0.2);
+      margin-left: 0.75rem;
+      vertical-align: middle;
+    }
+
+    .current-badge .dot {
+      width: 6px;
+      height: 6px;
+      background: #4ade80;
+      border-radius: 50%;
+      animation: pulse-ring 2s infinite;
+    }
+
+    /* Hero visual tech rings */
+    .hero-rings {
+      position: relative;
+      width: 340px;
+      height: 340px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .ring {
+      position: absolute;
+      border-radius: 50%;
+      border: 1px solid;
+      animation: spin-slow linear infinite;
+    }
+
+    .ring-1 {
+      width: 100%;
+      height: 100%;
+      border-color: rgba(32, 178, 166, 0.15);
+      animation-duration: 30s;
+    }
+
+    .ring-2 {
+      width: 80%;
+      height: 80%;
+      border-color: rgba(32, 178, 166, 0.1);
+      animation-duration: 20s;
+      animation-direction: reverse;
+    }
+
+    .ring-3 {
+      width: 60%;
+      height: 60%;
+      border-color: rgba(32, 178, 166, 0.2);
+      animation-duration: 15s;
+    }
+
+    @keyframes spin-slow {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .hero-avatar-inner {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background: var(--color-surface);
+      border: 2px solid rgba(32, 178, 166, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 5rem;
+      position: relative;
+      z-index: 5;
+      box-shadow: 0 0 40px rgba(32, 178, 166, 0.2);
+    }
+
+    .ring-dot {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--color-primary);
+      box-shadow: 0 0 10px var(--color-primary);
+    }
+
+    /* Floating tech labels around rings */
+    .floating-tech {
+      position: absolute;
+      padding: 0.3rem 0.75rem;
+      border-radius: var(--radius-full);
+      font-size: 0.7rem;
+      font-weight: 600;
+      white-space: nowrap;
+      z-index: 10;
+    }
+
+    .ft-1 {
+      top: 5%;
+      right: 0;
+    }
+
+    .ft-2 {
+      bottom: 15%;
+      right: -10%;
+    }
+
+    .ft-3 {
+      top: 40%;
+      left: -15%;
+    }
+
+    .ft-4 {
+      bottom: 5%;
+      left: 10%;
+    }
+
+    /* Responsive: hero visual */
+    @media (max-width: 767px) {
+      .hero-rings {
+        width: 260px;
+        height: 260px;
+      }
+
+      .hero-avatar-inner {
+        width: 150px;
+        height: 150px;
+        font-size: 3.5rem;
+      }
+
+      .hero-glow-blob {
+        width: 260px;
+        height: 260px;
+      }
+
+      .floating-tech {
+        font-size: 0.65rem;
+        padding: 0.25rem 0.6rem;
+      }
+
+      .ft-2 {
+        right: -2%;
+      }
+
+      .ft-3 {
+        left: -8%;
+      }
+
+      .hero-stats {
+        gap: 1rem;
+        justify-content: space-between;
+      }
+
+      .stat-divider {
+        display: none;
+      }
+
+      .stat-number {
+        font-size: 1.5rem;
+      }
+    }
+
+    @media (max-width: 479px) {
+      .hero-rings {
+        width: 220px;
+        height: 220px;
+      }
+
+      .hero-avatar-inner {
+        width: 130px;
+        height: 130px;
+        font-size: 3rem;
+      }
+
+      .hero-glow-blob {
+        width: 220px;
+        height: 220px;
+      }
+
+      .ft-1,
+      .ft-4 {
+        display: none;
+      }
+    }
+
+    @media (min-width: 768px) and (max-width: 1023px) {
+      .hero-rings {
+        width: 300px;
+        height: 300px;
+      }
+
+      .hero-avatar-inner {
+        width: 180px;
+        height: 180px;
+        font-size: 4.5rem;
+      }
+    }
+  </style>
+
+
+</head>
+
+<body>
+
+  <div class="particles-container" id="particles-container"></div>
+
+  <header id="header">
+    <nav class="container flex align-center justify-between">
+      <a href="#" class="logo">MU<span>U</span></a>
+
+      <div class="nav-pills glass">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#education" class="nav-link">Education</a>
+      </div>
+
+      <div class="header-cta">
+        <a href="#contact" class="btn btn-primary btn-sm">Contact Me</a>
+      </div>
+
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu" aria-expanded="false"
+        aria-controls="mobile-nav">
+        <i data-lucide="menu"></i>
+      </button>
+    </nav>
+
+    <div class="mobile-nav" id="mobile-nav">
+      <a href="#about" class="nav-link">About</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#experience" class="nav-link">Experience</a>
+      <a href="#education" class="nav-link">Education</a>
+      <a href="#contact" class="btn btn-primary w-full">Contact Me</a>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero" class="hero">
+      <div class="hero-bg" aria-hidden="true">
+        <canvas id="hero-canvas" class="hero-canvas"></canvas>
+        <div class="hero-circuit hero-circuit-left"></div>
+        <div class="hero-circuit hero-circuit-right"></div>
+        <div class="hero-ambient hero-ambient-1"></div>
+        <div class="hero-ambient hero-ambient-2"></div>
+        <div class="hero-ambient hero-ambient-3"></div>
+      </div>
+      <div class="hero-gradient"></div>
+
+      <div class="container">
+        <div class="grid hero-grid gap-6 align-center">
+
+          <div class="animate-fade-in">
+            <span class="badge glass mb-4">
+              <span class="badge-dot"></span>
+              Web &amp; Mobile Application Developer • React Native &amp; React.js &amp; Flutter
+            </span>
+
+            <h1 class="hero-title">
+              Building <span class="text-primary glow-text">mobile</span><br>
+              experiences that<br>
+              <span class="font-serif">scale.</span>
+            </h1>
+
+            <p class="hero-subtitle">
+              Hi, I'm <strong style="color:var(--color-foreground)">Mazhar Ud Din</strong> — a Web &amp; Mobile
+              Application Developer with 3+ years shipping production React Native, React.js, and Flutter apps across
+              e-commerce, tourism, tailoring, and field-survey domains. I own features end-to-end — Firebase auth,
+              real-time data, role-based access, push notifications, and payments.
+            </p>
+
+            <div class="platform-badges animate-fade-in animation-delay-200">
+              <span class="platform-badge rn">React Native</span>
+              <span class="platform-badge react">React.js</span>
+              <span class="platform-badge flutter">Flutter</span>
+              <span class="platform-badge android">Firebase</span>
+            </div>
+
+            <div class="flex flex-wrap gap-3 hero-cta-buttons">
+              <a href="#contact" class="btn btn-primary btn-lg">Contact Me <i data-lucide="arrow-right"></i></a>
+              <a href="assets/Mazhar_Ud_Din_Resume.pdf" download="Mazhar_Ud_Din_Resume.pdf" class="btn btn-lg btn-animated-border" id="download-cv-btn">
+                <svg viewBox="0 0 200 60" preserveAspectRatio="none">
+                  <path
+                    d="M 30,1 A 29,29 0 0 0 1,30 L 1,30 A 29,29 0 0 0 30,59 L 170,59 A 29,29 0 0 0 199,30 L 199,30 A 29,29 0 0 0 170,1 Z">
+                  </path>
+                </svg>
+                Download CV
+              </a>
+            </div>
+
+            <div class="social-links animate-fade-in animation-delay-400">
+              <span class="text-muted" style="font-size:0.875rem;">Find me on:</span>
+              <a href="https://www.linkedin.com/in/mazhar-ud-din-b71137252" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  aria-hidden="true">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                  <rect width="4" height="12" x="2" y="9"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+              </a>
+              <a href="https://github.com/mazhar-ud-din" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  aria-hidden="true">
+                  <path
+                    d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4">
+                  </path>
+                  <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                </svg>
+              </a>
+              <a href="mailto:mazharuddin07610761@gmail.com" class="social-icon" aria-label="Email"><i data-lucide="mail"></i></a>
+            </div>
+          </div>
+
+          <div class="hero-image-container animate-fade-in animation-delay-300">
+            <div class="hero-glow-blob"></div>
+            <div class="hero-rings">
+              <div class="ring ring-1">
+                <div class="ring-dot" style="top:-5px;left:50%;transform:translateX(-50%);"></div>
+              </div>
+              <div class="ring ring-2">
+                <div class="ring-dot"
+                  style="bottom:-5px;left:50%;transform:translateX(-50%);background:#a78bfa;box-shadow:0 0 10px #a78bfa;">
+                </div>
+              </div>
+              <div class="ring ring-3"></div>
+              <div class="hero-avatar-inner">📱</div>
+
+              <span class="floating-tech glass ft-1">Flutter</span>
+              <span class="floating-tech glass ft-2">Firebase</span>
+              <span class="floating-tech glass ft-3">React Native</span>
+              <span class="floating-tech glass ft-4">React.js</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-scroll animate-fade-in animation-delay-800">
+        <a href="#about" class="scroll-indicator">
+          <span>Scroll</span>
+          <i data-lucide="chevron-down"></i>
+        </a>
+      </div>
+    </section>
+
+    <div class="tech-marquee-section" aria-label="Technologies and stacks I work with">
+      <div class="tech-marquee-track">
+        <div class="tech-marquee-item"><span class="tech-marquee-icon">⚛️</span> React Native</div>
+        <div class="tech-marquee-item"><span class="tech-marquee-icon">⚛️</span> React.js</div>
+        <div class="tech-marquee-item"><span class="tech-marquee-icon">💙</span> Flutter</div>
+        <div class="tech-marquee-item"><span class="tech-marquee-icon">🟨</span> JavaScript</div>
+        <div class="tech-marquee-item"><span class="tech-marquee-icon">🔷</span> TypeScript</div>
+        <div class="tech-marquee-item"><span class="tech-marquee-icon">🔄</span> Redux Toolkit</div>
+        <div class="tech-marquee-item"><span class="tech-marquee-icon">🔥</span> Firebase</div>
+        <div class="tech-marquee-item"><span class="tech-marquee-icon">☁️</span> Cloud Firestore</div>
+        <div class="tech-marquee-item"><span class="tech-marquee-icon">🔐</span> Social Login</div>
+        <div class="tech-marquee-item"><span class="tech-marquee-icon">🌐</span> REST APIs</div>
+        <div class="tech-marquee-item"><span class="tech-marquee-icon">🔔</span> Push Notifications</div>
+        <div class="tech-marquee-item"><span class="tech-marquee-icon">💳</span> Payments</div>
+        <div class="tech-marquee-item"><span class="tech-marquee-icon">💬</span> Real-time Chat</div>
+        <div class="tech-marquee-item"><span class="tech-marquee-icon">🗄️</span> SQL Server</div>
+        <div class="tech-marquee-item"><span class="tech-marquee-icon">🟣</span> .NET / MVC</div>
+        <div class="tech-marquee-item"><span class="tech-marquee-icon">📱</span> Xcode</div>
+        <div class="tech-marquee-item"><span class="tech-marquee-icon">🛠️</span> Git &amp; GitHub</div>
+        <div class="tech-marquee-item"><span class="tech-marquee-icon">✨</span> Cursor</div>
+        <div class="tech-marquee-item"><span class="tech-marquee-icon">🤖</span> Claude</div>
+
+        <div class="tech-marquee-item"><span class="tech-marquee-icon">⚛️</span> React Native</div>
+        <div class="tech-marquee-item"><span class="tech-marquee-icon">⚛️</span> React.js</div>
+        <div class="tech-marquee-item"><span class="tech-marquee-icon">💙</span> Flutter</div>
+        <div class="tech-marquee-item"><span class="tech-marquee-icon">🟨</span> JavaScript</div>
+        <div class="tech-marquee-item"><span class="tech-marquee-icon">🔷</span> TypeScript</div>
+        <div class="tech-marquee-item"><span class="tech-marquee-icon">🔄</span> Redux Toolkit</div>
+        <div class="tech-marquee-item"><span class="tech-marquee-icon">🔥</span> Firebase</div>
+        <div class="tech-marquee-item"><span class="tech-marquee-icon">☁️</span> Cloud Firestore</div>
+        <div class="tech-marquee-item"><span class="tech-marquee-icon">🔐</span> Social Login</div>
+        <div class="tech-marquee-item"><span class="tech-marquee-icon">🌐</span> REST APIs</div>
+        <div class="tech-marquee-item"><span class="tech-marquee-icon">🔔</span> Push Notifications</div>
+        <div class="tech-marquee-item"><span class="tech-marquee-icon">💳</span> Payments</div>
+        <div class="tech-marquee-item"><span class="tech-marquee-icon">💬</span> Real-time Chat</div>
+        <div class="tech-marquee-item"><span class="tech-marquee-icon">🗄️</span> SQL Server</div>
+        <div class="tech-marquee-item"><span class="tech-marquee-icon">🟣</span> .NET / MVC</div>
+        <div class="tech-marquee-item"><span class="tech-marquee-icon">📱</span> Xcode</div>
+        <div class="tech-marquee-item"><span class="tech-marquee-icon">🛠️</span> Git &amp; GitHub</div>
+        <div class="tech-marquee-item"><span class="tech-marquee-icon">✨</span> Cursor</div>
+        <div class="tech-marquee-item"><span class="tech-marquee-icon">🤖</span> Claude</div>
+      </div>
+    </div>
+
+    <section id="about" class="py-32">
+      <div class="container">
+        <div class="grid about-grid gap-6">
+
+          <div class="about-bio">
+            <span class="text-primary section-label">About Me</span>
+            <h2 class="section-title mb-6">
+              From idea to<br>
+              <span class="font-serif text-white">live apps.</span>
+            </h2>
+
+            <div class="text-muted" style="display:flex;flex-direction:column;gap:1.25rem;margin-bottom:2rem;">
+              <p>
+                I'm a Web &amp; Mobile Application Developer with hands-on experience delivering production
+                <strong style="color:var(--color-foreground)">React Native</strong>,
+                <strong style="color:var(--color-foreground)">React.js</strong>, and
+                <strong style="color:var(--color-foreground)">Flutter</strong> applications across fintech-adjacent,
+                e-commerce, tailoring, tourism, and field-survey domains.
+              </p>
+              <p>
+                I own features end-to-end — from Firebase-backed authentication and real-time data to role-based access,
+                push notifications, and payment integrations. I'm known for shipping live, user-facing products and
+                adapting quickly to new client stacks in an agency setting.
+              </p>
+            </div>
+
+            <div class="skill-category">
+              <div class="skill-category-title">Languages</div>
+              <div class="skills-grid">
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">TypeScript</span>
+                <span class="skill-tag">ECMAScript</span>
+                <span class="skill-tag">Dart</span>
+                <span class="skill-tag">SQL</span>
+              </div>
+            </div>
+
+            <div class="skill-category">
+              <div class="skill-category-title">Mobile &amp; Frontend</div>
+              <div class="skills-grid">
+                <span class="skill-tag">React Native</span>
+                <span class="skill-tag">React.js</span>
+                <span class="skill-tag">Flutter</span>
+                <span class="skill-tag">Redux</span>
+                <span class="skill-tag">Redux Toolkit</span>
+              </div>
+            </div>
+
+            <div class="skill-category">
+              <div class="skill-category-title">Backend &amp; Data</div>
+              <div class="skills-grid">
+                <span class="skill-tag">Firebase</span>
+                <span class="skill-tag">Cloud Firestore</span>
+                <span class="skill-tag">Social Login</span>
+                <span class="skill-tag">REST API Integration</span>
+                <span class="skill-tag">Push Notifications</span>
+                <span class="skill-tag">SQL Server</span>
+                <span class="skill-tag">MVC</span>
+                <span class="skill-tag">.NET</span>
+              </div>
+            </div>
+
+            <div class="skill-category">
+              <div class="skill-category-title">Tools &amp; Platforms</div>
+              <div class="skills-grid">
+                <span class="skill-tag">Git</span>
+                <span class="skill-tag">GitHub Desktop</span>
+                <span class="skill-tag">Xcode</span>
+                <span class="skill-tag">Cursor</span>
+                <span class="skill-tag">Claude</span>
+                <span class="skill-tag">MS Excel</span>
+                <span class="skill-tag">MS Word</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-features">
+            <p class="about-features-label section-label text-primary">Core Strengths</p>
+            <div class="about-features-grid">
+
+              <article class="feature-card glass feature-card--teal">
+                <div class="feature-card-accent" aria-hidden="true"></div>
+                <div class="feature-icon-wrapper">
+                  <i data-lucide="flame"></i>
+                </div>
+                <h4 class="feature-title">Firebase Auth &amp; Real-time Data</h4>
+                <p class="feature-desc">Auth, Cloud Firestore, social login, and live sync across production apps.</p>
+              </article>
+
+              <article class="feature-card glass feature-card--violet">
+                <div class="feature-card-accent" aria-hidden="true"></div>
+                <div class="feature-icon-wrapper">
+                  <i data-lucide="shield"></i>
+                </div>
+                <h4 class="feature-title">Role-Based Access &amp; Logic</h4>
+                <p class="feature-desc">Mechanic/Dealer/Admin flows, wallets, invoicing, and QR scan verification.</p>
+              </article>
+
+              <article class="feature-card glass feature-card--green">
+                <div class="feature-card-accent" aria-hidden="true"></div>
+                <div class="feature-icon-wrapper">
+                  <i data-lucide="bell"></i>
+                </div>
+                <h4 class="feature-title">Payments, Chat &amp; Push</h4>
+                <p class="feature-desc">In-app payments, real-time chat, and push notifications for live user apps.</p>
+              </article>
+
+              <article class="feature-card glass feature-card--amber">
+                <div class="feature-card-accent" aria-hidden="true"></div>
+                <div class="feature-icon-wrapper">
+                  <i data-lucide="wifi-off"></i>
+                </div>
+                <h4 class="feature-title">Offline Field Survey Apps</h4>
+                <p class="feature-desc">Offline-capable multi-role forms for low-connectivity field programs.</p>
+              </article>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="py-32 projects-section" data-view="placeholders">
+      <div class="projects-bg" aria-hidden="true">
+        <div class="projects-ambient projects-ambient-1"></div>
+        <div class="projects-ambient projects-ambient-2"></div>
+        <canvas id="projects-canvas" class="projects-canvas"></canvas>
+      </div>
+      <div class="container projects-content">
+        <div class="text-center mb-16">
+          <span class="text-primary section-label">Portfolio</span>
+          <h2 class="section-title">
+            Featured <span class="font-serif">Projects</span>
+          </h2>
+          <p class="text-muted max-w-3xl section-desc">
+            Live production apps I've built and shipped — spanning e-commerce, tourism, tailoring, rewards, and
+            field-survey work.
+          </p>
+        </div>
+
+        <div class="grid grid-2 gap-4">
+          <div class="project-card glass glow-border">
+            <div class="project-image-wrapper project-showcase">
+              <span class="project-gallery-badge">Live App</span>
+              <div class="showcase-track">
+                <article class="showcase-col">
+                  <div class="showcase-copy">
+                    <h4 class="showcase-title">Role-based access</h4>
+                    <p class="showcase-sub">Mechanic &amp; Dealer login in one app</p>
+                  </div>
+                  <div class="phone-frame">
+                    <img src="assets/future-role.webp" alt="Future Parts role selection for Mechanic and Dealer">
+                  </div>
+                </article>
+                <article class="showcase-col">
+                  <div class="showcase-copy">
+                    <h4 class="showcase-title">Scheme &amp; wallet</h4>
+                    <p class="showcase-sub">Track points, transfers, and balance</p>
+                  </div>
+                  <div class="phone-frame">
+                    <img src="assets/future-home-wallet.jpg" alt="Future Parts home with scheme points and wallet">
+                  </div>
+                </article>
+                <article class="showcase-col">
+                  <div class="showcase-copy">
+                    <h4 class="showcase-title">Multi QR Scanner</h4>
+                    <p class="showcase-sub">Scan parts and earn rewards instantly</p>
+                  </div>
+                  <div class="phone-frame">
+                    <img src="assets/future-home-qr.webp" alt="Future Parts home with Multi QR Scanner">
+                  </div>
+                </article>
+              </div>
+            </div>
+            <div class="project-content">
+              <div>
+                <div class="project-header">
+                  <h3 class="project-title">Future Parts App</h3>
+                </div>
+                <div class="case-study-list">
+                  <div class="case-study-item"><span class="case-study-label problem">Problem:</span> Mechanics and dealers needed a reward platform to track QR scans, wallets, and dealer schemes in one place.</div>
+                  <div class="case-study-item"><span class="case-study-label solution">What I Built:</span> Built a live React Native app with QR scan verification, spin-to-win logic, wallet tracking, and role-based access for Mechanic, Dealer, and Admin.</div>
+                  <div class="case-study-item"><span class="case-study-label result">Result:</span> Shipped a production reward system that connects mechanics, dealers, and admins around scheme tracking and payouts.</div>
+                </div>
+              </div>
+              <div class="project-tags">
+                <span class="project-tag">React Native</span>
+                <span class="project-tag">Firebase</span>
+                <span class="project-tag">QR Scans</span>
+                <span class="project-tag">Wallet</span>
+                <span class="project-tag">RBAC</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-card glass glow-border">
+            <div class="project-image-wrapper project-showcase">
+              <span class="project-gallery-badge">World Bank</span>
+              <div class="showcase-track">
+                <article class="showcase-col">
+                  <div class="showcase-copy">
+                    <h4 class="showcase-title">Secure field login</h4>
+                    <p class="showcase-sub">Access for reconstruction survey teams</p>
+                  </div>
+                  <div class="phone-frame">
+                    <img src="assets/hru-login.webp" alt="HRU Housing Reconstruction Unit login">
+                  </div>
+                </article>
+                <article class="showcase-col">
+                  <div class="showcase-copy">
+                    <h4 class="showcase-title">Multi-role menu</h4>
+                    <p class="showcase-sub">Validator tools for pending &amp; rejected forms</p>
+                  </div>
+                  <div class="phone-frame">
+                    <img src="assets/hru-menu.webp" alt="HRU Validator side menu with survey modules">
+                  </div>
+                </article>
+                <article class="showcase-col">
+                  <div class="showcase-copy">
+                    <h4 class="showcase-title">Survey sections</h4>
+                    <p class="showcase-sub">Damage assessment forms, section by section</p>
+                  </div>
+                  <div class="phone-frame">
+                    <img src="assets/hru-survey.webp" alt="HRU Damage Assessment survey sections">
+                  </div>
+                </article>
+              </div>
+            </div>
+            <div class="project-content">
+              <div>
+                <div class="project-header">
+                  <h3 class="project-title">HRU — House Reconstruction Unit</h3>
+                </div>
+                <div class="case-study-list">
+                  <div class="case-study-item"><span class="case-study-label problem">Problem:</span> Flood-affected home reconstruction in Balochistan required offline, multi-role field surveys with strict form validation.</div>
+                  <div class="case-study-item"><span class="case-study-label solution">What I Built:</span> Developed an offline-capable multi-role survey app with form validation and a correction flow for a World Bank–funded reconstruction program.</div>
+                  <div class="case-study-item"><span class="case-study-label result">Result:</span> Supported field teams collecting reconstruction data in low-connectivity areas across Balochistan.</div>
+                </div>
+              </div>
+              <div class="project-tags">
+                <span class="project-tag">React Native</span>
+                <span class="project-tag">Offline First</span>
+                <span class="project-tag">Multi-role Forms</span>
+                <span class="project-tag">Firebase</span>
+                <span class="project-tag">Field Survey</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-card glass glow-border">
+            <div class="project-image-wrapper project-showcase">
+              <span class="project-gallery-badge">Live App</span>
+              <div class="showcase-track">
+                <article class="showcase-col">
+                  <div class="showcase-copy">
+                    <h4 class="showcase-title">Match. Meet. Marry.</h4>
+                    <p class="showcase-sub">Faith-centered courtship branding</p>
+                  </div>
+                  <div class="phone-frame">
+                    <img src="assets/catholic-splash.webp" alt="Traditional Catholic Courtship splash branding">
+                  </div>
+                </article>
+                <article class="showcase-col">
+                  <div class="showcase-copy">
+                    <h4 class="showcase-title">Welcome back</h4>
+                    <p class="showcase-sub">Secure login for members</p>
+                  </div>
+                  <div class="phone-frame">
+                    <img src="assets/catholic-login.webp" alt="Traditional Catholic Courtship login screen">
+                  </div>
+                </article>
+                <article class="showcase-col">
+                  <div class="showcase-copy">
+                    <h4 class="showcase-title">My Connections</h4>
+                    <p class="showcase-sub">Likes received &amp; respectful matches</p>
+                  </div>
+                  <div class="phone-frame">
+                    <img src="assets/catholic-connections.webp" alt="Traditional Catholic Courtship My Connections likes">
+                  </div>
+                </article>
+              </div>
+            </div>
+            <div class="project-content">
+              <div>
+                <div class="project-header">
+                  <h3 class="project-title">Traditional Catholic Courtship</h3>
+                  <div class="project-links">
+                    <a href="https://play.google.com/store/apps/details?id=com.traditionalCatholicCourtshipsApp" target="_blank"
+                      rel="noopener noreferrer" class="project-link-icon" aria-label="Play Store Link"
+                      title="Google Play Store"><i data-lucide="arrow-up-right"></i></a>
+                    <a href="https://apps.apple.com/us/app/traditional-catholic-courtship/id6738470019" target="_blank"
+                      rel="noopener noreferrer" class="project-link-icon" aria-label="App Store Link"
+                      title="Apple App Store"><i data-lucide="external-link"></i></a>
+                  </div>
+                </div>
+                <div class="case-study-list">
+                  <div class="case-study-item"><span class="case-study-label problem">Problem:</span> Traditional Catholic singles needed a faith-centered alternative to swipe-based dating apps — a respectful space to pursue sacramental marriage.</div>
+                  <div class="case-study-item"><span class="case-study-label solution">What I Built:</span> Built a React Native courtship app with profiles, live chat, subscriptions, and in-app purchases so members can form Christ-centered connections.</div>
+                  <div class="case-study-item"><span class="case-study-label result">Result:</span> Shipped live on the App Store and Google Play as a production lifestyle app for Traditional Catholic courtship.</div>
+                </div>
+              </div>
+              <div class="project-tags">
+                <span class="project-tag">React Native</span>
+                <span class="project-tag">Live Chat</span>
+                <span class="project-tag">In-App Purchases</span>
+                <span class="project-tag">Subscriptions</span>
+                <span class="project-tag">iOS &amp; Android</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-card glass glow-border">
+            <div class="project-image-wrapper project-showcase">
+              <span class="project-gallery-badge">Live App</span>
+              <div class="showcase-track">
+                <article class="showcase-col">
+                  <div class="showcase-copy">
+                    <h4 class="showcase-title">The best way to manage your trips</h4>
+                  </div>
+                  <div class="phone-frame">
+                    <img src="assets/tristar-login.webp" alt="TriStar login screen">
+                  </div>
+                </article>
+                <article class="showcase-col">
+                  <div class="showcase-copy">
+                    <h4 class="showcase-title">Timeline on Home</h4>
+                    <p class="showcase-sub">Flights, hotels &amp; taxis in one feed</p>
+                  </div>
+                  <div class="phone-frame">
+                    <img src="assets/tristar-timeline.jpg" alt="TriStar trip timeline with flights, hotels, and taxis">
+                  </div>
+                </article>
+                <article class="showcase-col">
+                  <div class="showcase-copy">
+                    <h4 class="showcase-title">Easy chat</h4>
+                    <p class="showcase-sub">Talk to your agency or teammates instantly</p>
+                  </div>
+                  <div class="phone-frame">
+                    <img src="assets/tristar-chat.jpg" alt="TriStar in-app chat with travel agency">
+                  </div>
+                </article>
+              </div>
+            </div>
+            <div class="project-content">
+              <div>
+                <div class="project-header">
+                  <h3 class="project-title">TriStar Apps</h3>
+                </div>
+                <div class="case-study-list">
+                  <div class="case-study-item"><span class="case-study-label problem">Problem:</span> Travelers and agencies needed one app to manage trips, bookings, and real-time communication.</div>
+                  <div class="case-study-item"><span class="case-study-label solution">What I Built:</span> Shipped a React Native travel app with secure login, a trip timeline for flights, hotels, and taxis, in-app chat, and QR access.</div>
+                  <div class="case-study-item"><span class="case-study-label result">Result:</span> Launched a live production app that keeps itineraries and agency chat in one place.</div>
+                </div>
+              </div>
+              <div class="project-tags">
+                <span class="project-tag">React Native</span>
+                <span class="project-tag">Travel</span>
+                <span class="project-tag">In-app Chat</span>
+                <span class="project-tag">Trip Timeline</span>
+                <span class="project-tag">QR Login</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-card glass glow-border">
+            <div class="project-image-wrapper project-showcase">
+              <span class="project-gallery-badge">Live App</span>
+              <div class="showcase-track">
+                <article class="showcase-col">
+                  <div class="showcase-copy">
+                    <h4 class="showcase-title">Guide dashboard</h4>
+                    <p class="showcase-sub">Map, SOS, polls, and live tour tools</p>
+                  </div>
+                  <div class="phone-frame">
+                    <img src="assets/glydde-home.webp" alt="Glydde guide dashboard with map and itinerary">
+                  </div>
+                </article>
+                <article class="showcase-col">
+                  <div class="showcase-copy">
+                    <h4 class="showcase-title">Travel itinerary</h4>
+                    <p class="showcase-sub">Day-by-day plans with photos &amp; weather</p>
+                  </div>
+                  <div class="phone-frame">
+                    <img src="assets/glydde-itinerary.webp" alt="Glydde travel itinerary timeline">
+                  </div>
+                </article>
+                <article class="showcase-col">
+                  <div class="showcase-copy">
+                    <h4 class="showcase-title">Multi-language</h4>
+                    <p class="showcase-sub">Choose the language that fits your trip</p>
+                  </div>
+                  <div class="phone-frame">
+                    <img src="assets/glydde-language.webp" alt="Glydde preferred language selection">
+                  </div>
+                </article>
+              </div>
+            </div>
+            <div class="project-content">
+              <div>
+                <div class="project-header">
+                  <h3 class="project-title">Glydde App</h3>
+                </div>
+                <div class="case-study-list">
+                  <div class="case-study-item"><span class="case-study-label problem">Problem:</span> Tourists and local guides lacked a live platform to coordinate tours, chat in real time, and handle payments.</div>
+                  <div class="case-study-item"><span class="case-study-label solution">What I Built:</span> Shipped a tourism guidance app with real-time chat, push notifications, and in-app payments between guides and tourists.</div>
+                  <div class="case-study-item"><span class="case-study-label result">Result:</span> Enabled live booking and communication between tourists and guides in a production React Native app.</div>
+                </div>
+              </div>
+              <div class="project-tags">
+                <span class="project-tag">React Native</span>
+                <span class="project-tag">Real-time Chat</span>
+                <span class="project-tag">Push Notifications</span>
+                <span class="project-tag">Payments</span>
+                <span class="project-tag">Firebase</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-card glass glow-border">
+            <div class="project-image-wrapper project-showcase">
+              <span class="project-gallery-badge">Live App</span>
+              <div class="showcase-track">
+                <article class="showcase-col">
+                  <div class="showcase-copy">
+                    <h4 class="showcase-title">Choose language</h4>
+                    <p class="showcase-sub">English, Deutsch, French &amp; more</p>
+                  </div>
+                  <div class="phone-frame">
+                    <img src="assets/stitch-language.webp" alt="Stitch 2 Stitch language selection">
+                  </div>
+                </article>
+                <article class="showcase-col">
+                  <div class="showcase-copy">
+                    <h4 class="showcase-title">Orders dashboard</h4>
+                    <p class="showcase-sub">Paid, unpaid, quotes &amp; invoices</p>
+                  </div>
+                  <div class="phone-frame">
+                    <img src="assets/stitch-home.webp" alt="Stitch 2 Stitch home with unpaid order amount">
+                  </div>
+                </article>
+                <article class="showcase-col">
+                  <div class="showcase-copy">
+                    <h4 class="showcase-title">Digitizing orders</h4>
+                    <p class="showcase-sub">Track stitch jobs from quote to delivered</p>
+                  </div>
+                  <div class="phone-frame">
+                    <img src="assets/stitch-orders.webp" alt="Stitch 2 Stitch digitizing order list">
+                  </div>
+                </article>
+              </div>
+            </div>
+            <div class="project-content">
+              <div>
+                <div class="project-header">
+                  <h3 class="project-title">Stitch 2 Stitch</h3>
+                </div>
+                <div class="case-study-list">
+                  <div class="case-study-item"><span class="case-study-label problem">Problem:</span> Digitizing and stitching shops were tracking orders, invoices, and unpaid amounts on paper.</div>
+                  <div class="case-study-item"><span class="case-study-label solution">What I Built:</span> Built Stitch 2 Stitch in React Native with multi-language support, order/quote dashboards, invoicing, and a digitizing order list.</div>
+                  <div class="case-study-item"><span class="case-study-label result">Result:</span> Replaced paper workflows with a live production app used by stitching businesses day to day.</div>
+                </div>
+              </div>
+              <div class="project-tags">
+                <span class="project-tag">React Native</span>
+                <span class="project-tag">Invoicing</span>
+                <span class="project-tag">Order Booking</span>
+                <span class="project-tag">Digitizing</span>
+                <span class="project-tag">Firebase</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-card glass glow-border">
+            <div class="project-image-wrapper project-showcase">
+              <span class="project-gallery-badge">In Progress</span>
+              <div class="showcase-track">
+                <article class="showcase-col">
+                  <div class="showcase-copy">
+                    <h4 class="showcase-title">Secure login</h4>
+                    <p class="showcase-sub">Field access for OBS Pharma teams</p>
+                  </div>
+                  <div class="phone-frame">
+                    <img src="assets/obs-login.jpg" alt="OBS Pharma login screen">
+                  </div>
+                </article>
+                <article class="showcase-col">
+                  <div class="showcase-copy">
+                    <h4 class="showcase-title">Scan verification</h4>
+                    <p class="showcase-sub">QR product records with batch &amp; expiry</p>
+                  </div>
+                  <div class="phone-frame">
+                    <img src="assets/obs-qr.jpg" alt="OBS Pharma scanned product record with QR">
+                  </div>
+                </article>
+                <article class="showcase-col">
+                  <div class="showcase-copy">
+                    <h4 class="showcase-title">Synced records</h4>
+                    <p class="showcase-sub">Export &amp; print verified scan details</p>
+                  </div>
+                  <div class="phone-frame">
+                    <img src="assets/obs-record.jpg" alt="OBS Pharma record details with sync status">
+                  </div>
+                </article>
+              </div>
+            </div>
+            <div class="project-content">
+              <div>
+                <div class="project-header">
+                  <h3 class="project-title">OBS Pharma</h3>
+                </div>
+                <div class="case-study-list">
+                  <div class="case-study-item"><span class="case-study-label problem">Problem:</span> Pharma field teams needed D2D scan verification to confirm product authenticity and visits.</div>
+                  <div class="case-study-item"><span class="case-study-label solution">What I Built:</span> Implementing a door-to-door pharma scan-verification platform with QR/scan workflows and role-based access.</div>
+                  <div class="case-study-item"><span class="case-study-label result">Result:</span> In progress — a verification app for pharmaceutical field operations.</div>
+                </div>
+              </div>
+              <div class="project-tags">
+                <span class="project-tag">React Native</span>
+                <span class="project-tag">QR Verification</span>
+                <span class="project-tag">RBAC</span>
+                <span class="project-tag">Firebase</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-card glass glow-border">
+            <div class="project-image-wrapper project-showcase">
+              <span class="project-gallery-badge">In Progress</span>
+              <div class="showcase-track">
+                <article class="showcase-col">
+                  <div class="showcase-copy">
+                    <h4 class="showcase-title">Pharmacy storefront</h4>
+                    <p class="showcase-sub">Categories, promos &amp; hot products</p>
+                  </div>
+                  <div class="phone-frame">
+                    <img src="assets/medico-home.jpg" alt="Time Medico home with categories and hot products">
+                  </div>
+                </article>
+                <article class="showcase-col">
+                  <div class="showcase-copy">
+                    <h4 class="showcase-title">On sale</h4>
+                    <p class="showcase-sub">Browse medicines &amp; add to cart fast</p>
+                  </div>
+                  <div class="phone-frame">
+                    <img src="assets/medico-sale.jpg" alt="Time Medico on-sale medical products">
+                  </div>
+                </article>
+                <article class="showcase-col">
+                  <div class="showcase-copy">
+                    <h4 class="showcase-title">Upload prescription</h4>
+                    <p class="showcase-sub">Camera or gallery — order ready for delivery</p>
+                  </div>
+                  <div class="phone-frame">
+                    <img src="assets/medico-prescription.jpg" alt="Time Medico upload prescription screen">
+                  </div>
+                </article>
+              </div>
+            </div>
+            <div class="project-content">
+              <div>
+                <div class="project-header">
+                  <h3 class="project-title">Time Medico</h3>
+                </div>
+                <div class="case-study-list">
+                  <div class="case-study-item"><span class="case-study-label problem">Problem:</span> Customers needed a reliable way to order medicines online with a clear delivery flow.</div>
+                  <div class="case-study-item"><span class="case-study-label solution">What I Built:</span> Building an e-commerce medicine delivery app covering catalog, cart, prescription upload, and order management in React Native.</div>
+                  <div class="case-study-item"><span class="case-study-label result">Result:</span> In progress — a mobile pharmacy experience designed for fast, secure medicine ordering.</div>
+                </div>
+              </div>
+              <div class="project-tags">
+                <span class="project-tag">React Native</span>
+                <span class="project-tag">E-commerce</span>
+                <span class="project-tag">Prescriptions</span>
+                <span class="project-tag">Firebase</span>
+                <span class="project-tag">Checkout</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-card glass glow-border">
+            <div class="project-image-wrapper project-showcase">
+              <span class="project-gallery-badge">In Progress</span>
+              <div class="showcase-track">
+                <article class="showcase-col">
+                  <div class="showcase-copy">
+                    <h4 class="showcase-title">Rider login</h4>
+                    <p class="showcase-sub">Secure access for delivery partners</p>
+                  </div>
+                  <div class="phone-frame">
+                    <img src="assets/medico-rider-login.jpg" alt="Time Medico Rider login screen">
+                  </div>
+                </article>
+                <article class="showcase-col">
+                  <div class="showcase-copy">
+                    <h4 class="showcase-title">Order overview</h4>
+                    <p class="showcase-sub">Pending, accepted, delivered at a glance</p>
+                  </div>
+                  <div class="phone-frame">
+                    <img src="assets/medico-rider-dashboard.jpg" alt="Time Medico Rider dashboard with order stats">
+                  </div>
+                </article>
+                <article class="showcase-col">
+                  <div class="showcase-copy">
+                    <h4 class="showcase-title">Pending orders</h4>
+                    <p class="showcase-sub">Customer, phone &amp; location for each drop</p>
+                  </div>
+                  <div class="phone-frame">
+                    <img src="assets/medico-rider-orders.jpg" alt="Time Medico Rider pending orders list">
+                  </div>
+                </article>
+              </div>
+            </div>
+            <div class="project-content">
+              <div>
+                <div class="project-header">
+                  <h3 class="project-title">Time Medico Rider App</h3>
+                </div>
+                <div class="case-study-list">
+                  <div class="case-study-item"><span class="case-study-label problem">Problem:</span> Medicine orders needed a dedicated rider flow to accept deliveries, navigate to customers, and confirm handoff.</div>
+                  <div class="case-study-item"><span class="case-study-label solution">What I Built:</span> Building a companion React Native rider app for Time Medico with order overview, pending queues, and delivery status tracking.</div>
+                  <div class="case-study-item"><span class="case-study-label result">Result:</span> In progress — the delivery-side companion that completes Time Medico’s order-to-door pipeline.</div>
+                </div>
+              </div>
+              <div class="project-tags">
+                <span class="project-tag">React Native</span>
+                <span class="project-tag">Rider App</span>
+                <span class="project-tag">Order Tracking</span>
+                <span class="project-tag">Firebase</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-card glass glow-border">
+            <div class="project-image-wrapper project-showcase">
+              <span class="project-gallery-badge">In Progress</span>
+              <div class="showcase-track">
+                <article class="showcase-col">
+                  <div class="showcase-copy">
+                    <h4 class="showcase-title">Welcome back</h4>
+                    <p class="showcase-sub">Sign in with your KeyVoters username</p>
+                  </div>
+                  <div class="phone-frame">
+                    <img src="assets/keyvoters-signin.jpg" alt="KeyVoters sign in screen">
+                  </div>
+                </article>
+                <article class="showcase-col">
+                  <div class="showcase-copy">
+                    <h4 class="showcase-title">Create account</h4>
+                    <p class="showcase-sub">Register for the 2027 online poll</p>
+                  </div>
+                  <div class="phone-frame">
+                    <img src="assets/keyvoters-register.jpg" alt="KeyVoters create account registration">
+                  </div>
+                </article>
+                <article class="showcase-col">
+                  <div class="showcase-copy">
+                    <h4 class="showcase-title">Voter profile</h4>
+                    <p class="showcase-sub">Verify VIN against the national register</p>
+                  </div>
+                  <div class="phone-frame">
+                    <img src="assets/keyvoters-profile.jpg" alt="KeyVoters voter profile and VIN verification">
+                  </div>
+                </article>
+              </div>
+            </div>
+            <div class="project-content">
+              <div>
+                <div class="project-header">
+                  <h3 class="project-title">KeyVoters</h3>
+                </div>
+                <div class="case-study-list">
+                  <div class="case-study-item"><span class="case-study-label problem">Problem:</span> Nigerian voters needed a trusted way to register, verify VIN, and engage ahead of online polls.</div>
+                  <div class="case-study-item"><span class="case-study-label solution">What I Built:</span> Building KeyVoters in React Native — account creation, sign-in, and voter-profile flows that check VIN against the national register.</div>
+                  <div class="case-study-item"><span class="case-study-label result">Result:</span> In progress — a civic engagement platform transforming political participation in Nigeria.</div>
+                </div>
+              </div>
+              <div class="project-tags">
+                <span class="project-tag">React Native</span>
+                <span class="project-tag">VIN Verification</span>
+                <span class="project-tag">Auth</span>
+                <span class="project-tag">Firebase</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-card glass glow-border">
+            <div class="project-image-wrapper project-showcase">
+              <span class="project-gallery-badge">In Progress</span>
+              <div class="showcase-track">
+                <article class="showcase-col">
+                  <div class="showcase-copy">
+                    <h4 class="showcase-title">Get started</h4>
+                    <p class="showcase-sub">Start maintenance or sign in as guest</p>
+                  </div>
+                  <div class="phone-frame">
+                    <img src="assets/onfix-splash.jpg" alt="OnFix welcome splash screen">
+                  </div>
+                </article>
+                <article class="showcase-col">
+                  <div class="showcase-copy">
+                    <h4 class="showcase-title">Top services</h4>
+                    <p class="showcase-sub">Electricity, plumbing, AC &amp; appliances</p>
+                  </div>
+                  <div class="phone-frame">
+                    <img src="assets/onfix-home.jpg" alt="OnFix home with service categories">
+                  </div>
+                </article>
+                <article class="showcase-col">
+                  <div class="showcase-copy">
+                    <h4 class="showcase-title">Wallet &amp; rewards</h4>
+                    <p class="showcase-sub">Account, support tickets &amp; referral codes</p>
+                  </div>
+                  <div class="phone-frame">
+                    <img src="assets/onfix-profile.jpg" alt="OnFix profile with wallet and rewards">
+                  </div>
+                </article>
+              </div>
+            </div>
+            <div class="project-content">
+              <div>
+                <div class="project-header">
+                  <h3 class="project-title">OnFix App</h3>
+                </div>
+                <div class="case-study-list">
+                  <div class="case-study-item"><span class="case-study-label problem">Problem:</span> Homeowners needed a trusted marketplace to book electricity, plumbing, AC, and appliance repairs in one place.</div>
+                  <div class="case-study-item"><span class="case-study-label solution">What I Built:</span> Building OnFix in React Native with service booking, wallet/rewards, multi-language support, and account management.</div>
+                  <div class="case-study-item"><span class="case-study-label result">Result:</span> In progress — a home-maintenance marketplace connecting customers with on-demand repair services.</div>
+                </div>
+              </div>
+              <div class="project-tags">
+                <span class="project-tag">React Native</span>
+                <span class="project-tag">Marketplace</span>
+                <span class="project-tag">Wallet</span>
+                <span class="project-tag">Multi-language</span>
+                <span class="project-tag">Firebase</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="py-32 experience-section">
+      <div class="experience-bg" aria-hidden="true">
+        <div class="experience-ambient experience-ambient-1"></div>
+        <div class="experience-ambient experience-ambient-2"></div>
+        <div class="experience-ambient experience-ambient-3"></div>
+      </div>
+      <div class="container experience-content">
+        <div class="text-center mb-16">
+          <span class="text-primary section-label">Career Path</span>
+          <h2 class="section-title">
+            Work <span class="font-serif">Experience</span>
+          </h2>
+          <p class="text-muted max-w-3xl section-desc">
+            3+ years building and shipping live React Native apps for agency clients and product teams.
+          </p>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item active">
+            <div class="timeline-dot"></div>
+            <div class="timeline-period">
+              Aug 2024 — Present
+              <span class="current-badge"><span class="dot"></span> Current</span>
+            </div>
+            <div class="timeline-header">
+              <h3 class="timeline-role text-primary">React Native Developer</h3>
+              <div class="timeline-company">A2Z Creatorz</div>
+            </div>
+            <div class="timeline-meta">
+              <span class="timeline-employment">Full-time</span>
+              <span class="timeline-meta-sep">·</span>
+              <span>Leading Web &amp; Digital Agency</span>
+            </div>
+            <ul class="timeline-highlights">
+              <li>Develop and maintain cross-platform React Native applications for agency clients, translating product requirements into functional, production-ready features.</li>
+              <li>Integrate REST APIs, Firebase services (Auth, Firestore, push notifications), and third-party SDKs to deliver complete app experiences.</li>
+              <li>Collaborate with designers and backend engineers in an agency setting to ship multiple concurrent client projects on schedule.</li>
+            </ul>
+            <div class="timeline-tech">
+              <span class="timeline-tech-tag">React Native</span>
+              <span class="timeline-tech-tag">Firebase</span>
+              <span class="timeline-tech-tag">REST APIs</span>
+              <span class="timeline-tech-tag">Push Notifications</span>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-period">
+              May 2022 — Aug 2024
+            </div>
+            <div class="timeline-header">
+              <h3 class="timeline-role">React Native Developer</h3>
+              <div class="timeline-company">IliveSolutions</div>
+            </div>
+            <div class="timeline-meta">
+              <span class="timeline-employment">Full-time</span>
+              <span class="timeline-meta-sep">·</span>
+              <span>Karachi, Pakistan</span>
+            </div>
+            <ul class="timeline-highlights">
+              <li>Built and shipped multiple live React Native applications end-to-end, including e-commerce, tailoring-workflow, tourism, and field-survey products.</li>
+              <li>Implemented role-based access control (Mechanic/Dealer/Admin, multi-role survey flows) and complex business logic such as wallet systems, invoicing, and QR-based scan verification.</li>
+              <li>Integrated payment flows, real-time chat, and push notifications; used Firebase Cloud Firestore for real-time data across apps.</li>
+              <li>Worked on an offline-capable, multi-role survey application for a World Bank–funded flood reconstruction program in Balochistan.</li>
+            </ul>
+            <div class="timeline-tech">
+              <span class="timeline-tech-tag">React Native</span>
+              <span class="timeline-tech-tag">Firebase</span>
+              <span class="timeline-tech-tag">Firestore</span>
+              <span class="timeline-tech-tag">Payments</span>
+              <span class="timeline-tech-tag">RBAC</span>
+              <span class="timeline-tech-tag">Offline Sync</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="py-32 education-section">
+      <div class="education-bg" aria-hidden="true">
+        <div class="education-grid"></div>
+        <div class="education-ambient education-ambient-1"></div>
+        <div class="education-ambient education-ambient-2"></div>
+        <div class="education-ambient education-ambient-3"></div>
+        <div class="education-orbit education-orbit-1"></div>
+        <div class="education-orbit education-orbit-2"></div>
+        <div class="education-orbit education-orbit-3"></div>
+        <span class="edu-float-pill edu-float-1">React Native</span>
+        <span class="edu-float-pill edu-float-2">Flutter</span>
+        <span class="edu-float-pill edu-float-3">Firebase</span>
+        <span class="edu-float-pill edu-float-4">Redux</span>
+        <span class="edu-float-pill edu-float-5">REST APIs</span>
+        <span class="edu-float-pill edu-float-6">Git</span>
+      </div>
+
+      <div class="container education-content">
+        <div class="text-center mb-16">
+          <span class="text-primary section-label">Background</span>
+          <h2 class="section-title">
+            Education &amp; <span class="font-serif">Foundation</span>
+          </h2>
+          <p class="text-muted max-w-3xl section-desc">
+            A computer science degree plus a dedicated web &amp; mobile development certification — the base I use to
+            ship production apps today.
+          </p>
+        </div>
+
+        <div class="edu-stack">
+          <div class="edu-card glass glow-border">
+            <div class="edu-card-accent" aria-hidden="true"></div>
+            <div class="edu-icon-wrap">
+              <div class="edu-icon-ring"></div>
+              <div class="edu-icon">🎓</div>
+            </div>
+            <div class="edu-body">
+              <div class="edu-meta">
+                <span class="edu-badge">BSCS</span>
+                <span class="edu-year-badge">Feb 2020 — Feb 2024</span>
+              </div>
+              <h3 class="edu-degree">Bachelor of Computer Science</h3>
+              <div class="edu-period"><i data-lucide="map-pin"></i> Karachi, Pakistan</div>
+              <div class="edu-courses-label">Also completed</div>
+              <div class="edu-courses-grid">
+                <span class="edu-course-chip">Intermediate (Pre-Engineering) — Dec 2019</span>
+                <span class="edu-course-chip">Matriculation — Aug 2016</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="edu-card glass glow-border">
+            <div class="edu-card-accent" aria-hidden="true"></div>
+            <div class="edu-icon-wrap">
+              <div class="edu-icon-ring"></div>
+              <div class="edu-icon">📜</div>
+            </div>
+            <div class="edu-body">
+              <div class="edu-meta">
+                <span class="edu-badge">Certification</span>
+                <span class="edu-year-badge">Mar 2021</span>
+              </div>
+              <h3 class="edu-degree">Web &amp; Mobile Application Development</h3>
+              <div class="edu-school">Saylani Welfare International Trust (SMIT)</div>
+              <div class="edu-period"><i data-lucide="map-pin"></i> Karachi, Pakistan</div>
+              <div class="edu-courses-label">Languages</div>
+              <div class="edu-courses-grid">
+                <span class="edu-course-chip">English — Professional Working</span>
+                <span class="edu-course-chip">Urdu — Native / Bilingual</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="contact" class="py-32">
+      <div class="container">
+        <div class="text-center mb-16">
+          <span class="text-primary section-label">Get In Touch</span>
+          <h2 class="section-title">
+            Let's build <span class="font-serif">something great.</span>
+          </h2>
+          <p class="text-muted max-w-3xl section-desc">
+            Have a mobile or web app idea? I'd love to hear about it. Reach out directly via email to discuss how we can
+            build it together.
+          </p>
+        </div>
+
+        <div class="contact-layout">
+          <div class="contact-card glass text-center flex column justify-center align-center py-10 px-8">
+            <div class="proj-icon-large mb-4" style="filter: drop-shadow(0 0 20px rgba(32, 178, 166, 0.4));">📩</div>
+            <h3 class="mb-3" style="font-size:1.5rem;">Direct Contact</h3>
+            <p class="text-muted mb-8 max-w-md" style="margin-left:auto;margin-right:auto;">
+              Ready to discuss React Native, Flutter, or web app projects? Click below to send an email directly.
+            </p>
+            <a href="mailto:mazharuddin07610761@gmail.com?subject=Web%20%26%20Mobile%20Development%20Inquiry%20-%20Portfolio"
+              class="btn btn-primary btn-lg w-full flex align-center justify-center gap-2"
+              style="max-w-xs;margin:0 auto;">
+              Email Me Directly <i data-lucide="mail"></i>
+            </a>
+          </div>
+
+          <div class="flex column gap-3 justify-between">
+            <div class="contact-card glass">
+              <h3 class="mb-6" style="font-size:1.25rem;">Contact Information</h3>
+              <div class="contact-info-list">
+                <a href="mailto:mazharuddin07610761@gmail.com" class="contact-info-item">
+                  <div class="contact-info-icon-wrapper"><i data-lucide="mail"></i></div>
+                  <div>
+                    <div class="contact-info-label">Email</div>
+                    <div class="contact-info-value">mazharuddin07610761@gmail.com</div>
+                  </div>
+                </a>
+                <a href="tel:+923102074204" class="contact-info-item">
+                  <div class="contact-info-icon-wrapper"><i data-lucide="phone"></i></div>
+                  <div>
+                    <div class="contact-info-label">Phone</div>
+                    <div class="contact-info-value">+92 310 2074204</div>
+                  </div>
+                </a>
+                <a href="tel:+923243340072" class="contact-info-item">
+                  <div class="contact-info-icon-wrapper"><i data-lucide="phone"></i></div>
+                  <div>
+                    <div class="contact-info-label">Phone</div>
+                    <div class="contact-info-value">+92 324 3340072</div>
+                  </div>
+                </a>
+                <a href="https://www.linkedin.com/in/mazhar-ud-din-b71137252" target="_blank" rel="noopener noreferrer" class="contact-info-item">
+                  <div class="contact-info-icon-wrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  aria-hidden="true">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                  <rect width="4" height="12" x="2" y="9"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+                  </div>
+                  <div>
+                    <div class="contact-info-label">LinkedIn</div>
+                    <div class="contact-info-value text-primary">linkedin.com/in/mazhar-ud-din-b71137252</div>
+                  </div>
+                </a>
+                <a href="https://github.com/mazhar-ud-din" target="_blank" rel="noopener noreferrer" class="contact-info-item">
+                  <div class="contact-info-icon-wrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  aria-hidden="true">
+                  <path
+                    d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4">
+                  </path>
+                  <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                </svg>
+                  </div>
+                  <div>
+                    <div class="contact-info-label">GitHub</div>
+                    <div class="contact-info-value text-primary">github.com/mazhar-ud-din</div>
+                  </div>
+                </a>
+                <div class="contact-info-item">
+                  <div class="contact-info-icon-wrapper"><i data-lucide="map-pin"></i></div>
+                  <div>
+                    <div class="contact-info-label">Location</div>
+                    <div class="contact-info-value">Karachi, Pakistan</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container flex justify-between align-center footer-layout">
+      <div>
+        <a href="#" class="logo">MU<span>U</span></a>
+        <p class="text-muted" style="font-size:0.875rem;margin-top:0.5rem;" id="copyright"></p>
+      </div>
+      <div class="footer-nav">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/mazhar-ud-din-b71137252" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  aria-hidden="true">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                  <rect width="4" height="12" x="2" y="9"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+        </a>
+        <a href="https://github.com/mazhar-ud-din" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  aria-hidden="true">
+                  <path
+                    d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4">
+                  </path>
+                  <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                </svg>
+        </a>
+        <a href="mailto:mazharuddin07610761@gmail.com" class="social-icon" aria-label="Email"><i data-lucide="mail"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
